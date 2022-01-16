@@ -1,0 +1,127 @@
+@import url("./font.css");
+
+.container {
+  max-width: 1700px;
+}
+
+.btn-primary {
+  background-color: #51a8b1;
+  border: none;
+  border-radius: 0 20px 20px 0;
+}
+.btn-primary:hover {
+  background-color: #575e5f;
+}
+.btn-secondary {
+  background-color: #33676d;
+  border: none;
+  border-radius: 20px 0 0 20px;
+}
+.wave {
+  background: url("../assets/images/vave\ 1.png") no-repeat right top;
+  background-size: contain;
+}
+.ring {
+    background: url("../assets/images/fin.png") no-repeat center ;
+    background-size: contain;
+    
+}
+.ring2 {
+    background: url("../assets/images/ring.png") no-repeat center ;
+    background-size: contain;
+    
+}
+
+
+.lh-2 {
+  line-height: 1.7;
+}
+.justify {
+  text-align: justify;
+}
+.back-gen {
+  background: url("../assets/images/backgen.png") no-repeat;
+}
+.rounded-10 {
+  border-radius: 50px;
+}
+.buble {
+  background: url("../assets/images/Ellipse.png") no-repeat center;
+  background-size: contain;
+  width: 67px;
+  height: 67px;
+}
+.active {
+  color: #51a8b1 !important;
+  
+}
+.active + i {
+  color: #51a8b1 !important;
+}
+
+@media screen and (max-width: 992px) {
+  .border-botto-xs {
+    border-right: 3px solid #51a7b154;
+    padding-right: 20px;
+  }
+}
+.arrow {
+    /* top: 183px; */
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    /* max-width: 433px; */
+    width: 100%;
+}
+
+
+@media screen and (max-width:992px) {
+    .circle-pos{
+        width: 100%;
+        bottom: -12%;
+    }
+    .circle{
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      margin: 0 5px;
+      border-radius: 50%;
+      border: 1px solid #51a8b1;
+      cursor: pointer;
+  }
+}
+@media screen and (min-width:993px) {
+    .circle-pos{
+        width: 100%;
+        bottom: 10%;
+    }
+    .circle{
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid #51a8b1;
+      cursor: pointer;
+  }
+}
+.fill{
+  background-color: #51a8b1;
+}
+.border-primary{
+  border-color: #ccc !important;
+}
+
+.fill-doctor{
+  border: 5px solid #51a8b1 !important;
+
+}
+.background-wave{
+
+}
+
+.ww{
+  max-width: 300px;
+  max-height: 300px;
+  display: inline-block;
+  margin: 0 auto;
+}
