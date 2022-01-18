@@ -3,6 +3,43 @@
 .container {
   max-width: 1700px;
 }
+.orib-btn {
+  position: relative;
+}
+.btn-signup {
+  border-radius: 18px 0px 0px 18px;
+  background: #003f4d;
+  color: #fff;
+  width: 45px;
+  height: 38px;
+  border: none;
+}
+.btn-signup::before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 38px;
+  background-color: #003f4d;
+  transform: skew(-15deg);
+  left: 38px;
+  bottom: 0px;
+}
+.btn-signin {
+  border-radius: 0 18px 18px 0;
+  background: #51a8b1;
+  color: #fff;
+  border: none;
+  width: 65px;
+  height: 38px;
+}
+.btn-signin:hover {
+  background-color: #93d1d8;
+}
+.btn-signup:hover::before,
+.btn-signup:hover {
+  background-color: #1d4b57;
+}
 
 .btn-primary {
   background-color: #51a8b1;
@@ -17,21 +54,20 @@
   border: none;
   border-radius: 20px 0 0 20px;
 }
-.wave {
-  background: url("../assets/images/vave\ 1.png") no-repeat right top;
-  background-size: contain;
+@media screen and (min-width: 992px) {
+  .wave {
+    background: url("../assets/images/vave\ 1.png") no-repeat right top;
+    background-size: contain;
+  }
 }
 .ring {
-    background: url("../assets/images/fin.png") no-repeat center ;
-    background-size: contain;
-    
+  background: url("../assets/images/fin.png") no-repeat center;
+  background-size: contain;
 }
 .ring2 {
-    background: url("../assets/images/ring.png") no-repeat center ;
-    background-size: contain;
-    
+  background: url("../assets/images/ring.png") no-repeat center;
+  background-size: contain;
 }
-
 
 .lh-2 {
   line-height: 1.7;
@@ -39,8 +75,16 @@
 .justify {
   text-align: justify;
 }
-.back-gen {
-  background: url("../assets/images/backgen.png") no-repeat;
+@media screen and (max-width: 767px) {
+  .back-gen {
+    background: url("../assets/images/backgen-mobile.svg") no-repeat center;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 768px) {
+  .back-gen {
+    background: url("../assets/images/backgen.png") no-repeat;
+  }
 }
 .rounded-10 {
   border-radius: 50px;
@@ -51,12 +95,20 @@
   width: 67px;
   height: 67px;
 }
-.active {
+.navbar-nav .active {
   color: #51a8b1 !important;
-  
 }
-.active + i {
+.navbar-nav .active + i {
   color: #51a8b1 !important;
+}
+.navbar-nav .active::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #51a8b1;
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 992px) {
@@ -66,62 +118,150 @@
   }
 }
 .arrow {
-    /* top: 183px; */
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    /* max-width: 433px; */
+  /* top: 183px; */
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  /* max-width: 433px; */
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .circle-pos {
     width: 100%;
-}
-
-
-@media screen and (max-width:992px) {
-    .circle-pos{
-        width: 100%;
-        bottom: -12%;
-    }
-    .circle{
-      display: inline-block;
-      width: 25px;
-      height: 25px;
-      margin: 0 5px;
-      border-radius: 50%;
-      border: 1px solid #51a8b1;
-      cursor: pointer;
+    bottom: -12%;
+  }
+  .circle {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 1px solid #51a8b1;
+    cursor: pointer;
   }
 }
-@media screen and (min-width:993px) {
-    .circle-pos{
-        width: 100%;
-        bottom: 10%;
-    }
-    .circle{
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      border: 1px solid #51a8b1;
-      cursor: pointer;
+@media screen and (min-width: 993px) {
+  .circle-pos {
+    width: 100%;
+    bottom: 10%;
+  }
+  .circle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid #51a8b1;
+    cursor: pointer;
   }
 }
-.fill{
+.fill {
   background-color: #51a8b1;
 }
-.border-primary{
+.border-primary {
   border-color: #ccc !important;
 }
 
-.fill-doctor{
+.fill-doctor {
   border: 5px solid #51a8b1 !important;
-
-}
-.background-wave{
-
 }
 
-.ww{
-  max-width: 300px;
-  max-height: 300px;
-  display: inline-block;
-  margin: 0 auto;
+.background-wave {
+  background-color: #e8f4f5;
+}
+.sign-circle {
+  display: flex;
+  width: 65px;
+  height: 65px;
+  background-color: #33676d;
+  color: #fff;
+  border-radius: 50%;
+  border: 10px solid #51a8b1;
+  justify-content: center;
+  align-items: center;
+}
+.circle-number {
+  background-color: #33676d;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+/* #002e39 */
+.color-primary {
+  color: #51a8b1 !important;
+}
+.color-secondry {
+  color: #002e39 !important;
+}
+.bi-arrow-left-circle-fill,
+.bi-arrow-right-circle-fill {
+  color: #002e39;
+}
+.bi-arrow-left-circle-fill:hover,
+.bi-arrow-right-circle-fill:hover {
+  color: #51a8b1;
+}
+#servicecard .card {
+  position: relative;
+}
+#servicecard .card:hover {
+  /* background-color: #002e39 !important ; */
+  background-image: linear-gradient(
+    to right bottom,
+    #047590,
+    #026279,
+    #005063,
+    #003f4d,
+    #002e39
+  );
+}
+#servicecard .card:hover .bi-arrow-left-circle-fill {
+  color: #51a8b1;
+  cursor: pointer;
+}
+#servicecard .card:hover .card-title {
+  color: #fff;
+}
+#servicecard .card:hover .bi-arrow-left-circle-fill::after {
+  content: "اطلاعات بیشتر";
+  position: absolute;
+  font-size: 0.7rem;
+  left: 50px;
+  bottom: 30px;
+  cursor: pointer;
+  font-family: Vazir;
+}
+.buttonPoint {
+  position: relative;
+  background-image: linear-gradient(to bottom, #51a8b1, #3b8792, #276874, #124a56, #002e39);
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+}
+.buttonPoint:hover{
+  color: rgb(182, 182, 182);
+  
+}
+.buttonPoint::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  background: url("../assets/images/points.svg") no-repeat center;
+  right: -60px;
+  color: #000;
+}
+.text-gradient {
+  background: #51A8B1;
+  background: -webkit-linear-gradient(to bottom, #51A8B1 58%, #33676D 75%);
+  background: -moz-linear-gradient(to bottom, #51A8B1 58%, #33676D 75%);
+  background: linear-gradient(to bottom, #51A8B1 58%, #33676D 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
