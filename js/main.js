@@ -1,8 +1,18 @@
+const navbar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 90) {
+    navbar.classList.add("header-scroll");
+  
+  }else{
+    navbar.classList.remove("header-scroll");
+  }
+});
+
 const lis = document.querySelectorAll(".nav-item");
 
 lis.forEach((nav) => {
   nav.addEventListener("click", (e) => {
-    const elems = document.querySelector(".active");
+    const elems = document.querySelector(".nav-item .active");
     console.log(elems);
     if (elems !== null) {
       elems.classList.remove("active");
@@ -11,30 +21,27 @@ lis.forEach((nav) => {
   });
 });
 //////////////////////
-const circles = document.querySelectorAll(".circle");
+// const circles = document.querySelectorAll(".circle");
 
-circles.forEach((circle) => {
-  circle.addEventListener("click", () => {
-    const elems = document.querySelector(".fill");
+// circles.forEach((circle) => {
+//   circle.addEventListener("click", () => {
+//     const elems = document.querySelector(".fill");
 
-    if (elems !== null) {
-      elems.classList.remove("fill");
-    }
-    circle.classList.add("fill");
-  });
-});
+//     if (elems !== null) {
+//       elems.classList.remove("fill");
+//     }
+//     circle.classList.add("fill");
+//   });
+// });
 
-
-const myCarousel = document.getElementById("carouselExampleIndicators");
-myCarousel.addEventListener("slide.bs.carousel", function (e) {
-  circles.forEach((circle) => {
-    circle.classList.remove("fill");
-  });
-  circles[Math.floor(Math.random() * 3)].classList.add("fill");
-});
+// const myCarousel = document.getElementById("carouselExampleIndicators");
+// myCarousel.addEventListener("slide.bs.carousel", function (e) {
+//   circles.forEach((circle) => {
+//     circle.classList.remove("fill");
+//   });
+//   circles[Math.floor(Math.random() * 3)].classList.add("fill");
+// });
 /////////////////////////////////////
-
-
 
 const doctors = document.querySelectorAll(".doctor");
 const myCarouselDoctor = document.getElementById("carouselExampleDark");
@@ -75,3 +82,20 @@ myCarouselDoctor.addEventListener("slide.bs.carousel", function (e) {
 });
 
 /////////////////////////////
+const circlesAndicator = document.querySelectorAll(".circle-pos .circle");
+console.log(circlesAndicator)
+const caruselHeader =  document.getElementById("carouselExampleIndicators")
+caruselHeader.addEventListener("slide.bs.carousel" , function(e){
+  if (e.relatedTarget.id == 1) {
+    circlesAndicator.forEach((circle) => circle.classList.remove("fill-circle"));
+    circlesAndicator[0].classList.add("fill-circle");
+  }
+  if (e.relatedTarget.id == 2) {
+    circlesAndicator.forEach((circle) => circle.classList.remove("fill-circle"));
+    circlesAndicator[1].classList.add("fill-circle");
+  }
+  if (e.relatedTarget.id == 3) {
+    circlesAndicator.forEach((circle) => circle.classList.remove("fill-circle"));
+    circlesAndicator[2].classList.add("fill-circle");
+  }
+})
