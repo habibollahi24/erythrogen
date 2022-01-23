@@ -33,9 +33,61 @@ button,
 ::before {
   font-family: Vazir;
 }
-/* header {
-  height: 100vh;
-} */
+
+@media screen and (max-width:576px) {
+  .side-menu{
+      position: absolute;
+      background-color: #fff;
+      padding: 0 1rem;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      transform: translateX(-1000px);
+      transition: all .4s;
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+@media screen and (min-width:577px) and (max-width:992px) {
+  .side-menu{
+      position: absolute;
+      background-color: #fff;
+      padding: 0 1rem;
+      width: 60vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      transform: translateX(-1000px);
+      transition: all .5s ease-in-out;
+      opacity: 0;
+      visibility: hidden;
+  }
+}
+
+
+.side-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 30px 0px;
+  margin: 10px 0;
+}
+.side-header a {
+  text-decoration: none;
+  margin-right: 15px;
+  color: #444;
+  font-weight: bold;
+}
+
+.side-header a:focus{
+  color: var(--primary-color);
+}
+
+
 .container {
   max-width: 1280px;
 }
@@ -51,6 +103,7 @@ button,
 .navbar {
   transition: all 0.3s;
 }
+
 .header-scroll {
   background-color: #fff;
   box-shadow: 2px 2px 5px rgb(231, 231, 231);
@@ -352,12 +405,7 @@ button,
   height: 67px;
 }
 
-@media screen and (max-width: 992px) {
-  .border-botto-xs {
-    border-right: 3px solid #51a7b154;
-    padding-right: 20px;
-  }
-}
+
 .arrow {
   /* top: 183px; */
   top: 50%;

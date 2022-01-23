@@ -7,7 +7,7 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("header-scroll");
   }
 });
-
+////////////////////////////////////////////////////
 const lis = document.querySelectorAll(".nav-item");
 
 lis.forEach((nav) => {
@@ -21,27 +21,7 @@ lis.forEach((nav) => {
   });
 });
 //////////////////////
-// const circles = document.querySelectorAll(".circle");
 
-// circles.forEach((circle) => {
-//   circle.addEventListener("click", () => {
-//     const elems = document.querySelector(".fill");
-
-//     if (elems !== null) {
-//       elems.classList.remove("fill");
-//     }
-//     circle.classList.add("fill");
-//   });
-// });
-
-// const myCarousel = document.getElementById("carouselExampleIndicators");
-// myCarousel.addEventListener("slide.bs.carousel", function (e) {
-//   circles.forEach((circle) => {
-//     circle.classList.remove("fill");
-//   });
-//   circles[Math.floor(Math.random() * 3)].classList.add("fill");
-// });
-/////////////////////////////////////
 
 const doctors = document.querySelectorAll(".doctor");
 const myCarouselDoctor = document.getElementById("carouselExampleDark");
@@ -98,4 +78,22 @@ caruselHeader.addEventListener("slide.bs.carousel" , function(e){
     circlesAndicator.forEach((circle) => circle.classList.remove("fill-circle"));
     circlesAndicator[2].classList.add("fill-circle");
   }
+})
+
+const sideMenu = document.querySelector(".side-menu")
+const closeBtn = document.getElementById("closeBtn")
+
+
+const togBtn = document.getElementById("togBtn");
+togBtn.addEventListener("click", () => {
+  sideMenu.style.transform = "translateX(0)"
+  sideMenu.style.opacity = 1
+  sideMenu.style.visibility = "visible"
+
+});
+
+closeBtn.addEventListener("click" , ()=>{
+    sideMenu.style.transform = "translateX(-1000px)"
+    sideMenu.style.opacity = 0
+  sideMenu.style.visibility = "hidden"
 })
